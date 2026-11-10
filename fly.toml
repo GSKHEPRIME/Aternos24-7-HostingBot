@@ -1,17 +1,19 @@
-# fly.toml app configuration file generated for aternos24-7-hostingbot-sxhjsq on 2026-11-10T06:55:58Z
+# fly.toml app configuration file generated for aternos24-7-hostingbot-hqwt4q on 2026-11-10T11:39:20Z
 #
-# See https://docs.fly.io/reference/configuration for information about how to use this file.
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'aternos24-7-hostingbot-sxhjsq'
+app = 'aternos24-7-hostingbot-hqwt4q'
 primary_region = 'sin'
 
 [build]
+[deploy]
+  strategy = 'immediate'
 
 [http_service]
-  internal_port = 5000
+  internal_port = 8080
   force_https = true
-  auto_stop_machines = true
+  auto_stop_machines = 'stop'
   auto_start_machines = true
   min_machines_running = 0
   processes = ['app']
@@ -21,6 +23,3 @@ primary_region = 'sin'
   cpu_kind = 'shared'
   cpus = 1
   memory_mb = 256
-
-[deploy]
-  strategy = 'immediate'
