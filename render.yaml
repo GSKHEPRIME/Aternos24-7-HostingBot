@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: aternos-24-7-hostingbot
+    runtime: node
+    plan: free
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /ping
+    envVars:
+      - key: SERVER_HOST
+        sync: false
+      - key: SERVER_PORT
+        value: "25565"
+      - key: MC_VERSION
+        value: "1.16.5"
+      - key: BOT_USERNAME
+        value: anubis
+      - key: BOT_AUTH_PASSWORD
+        sync: false
+      - key: BOT_PASSWORD
+        sync: false

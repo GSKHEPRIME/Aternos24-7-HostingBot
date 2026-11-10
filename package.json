@@ -1,11 +1,11 @@
 {
   "name": "minecraft-afk-bot",
   "version": "2.2",
-  "description": "Robust AFK bot for Minecraft servers with infinite uptime.",
+  "description": "Mineflayer bot for private Minecraft servers",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "node --check index.js"
+    "start": "node render.js",
+    "test": "node --check index.js && node --check render.js"
   },
   "author": "Lamgerr",
   "license": "MIT",
